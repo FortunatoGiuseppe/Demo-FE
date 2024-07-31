@@ -36,7 +36,7 @@ export class GreetingServiceComponent {
 
     const name = this.greetingForm.value.name;
 
-    this.http.get(`http://localhost:9090/greeter/greet?name=${encodeURIComponent(name)}`, { responseType: 'text' })
+    this.http.get(`https://c85bbadf-240c-4b70-a9f3-d65bc5dcfe1e-dev.e1-eu-north-azure.choreoapis.dev/demo/demo-be/v1.0/greeter/greet?name=${encodeURIComponent(name)}`, { responseType: 'text' })
       .pipe(
         catchError(err => {
           this.error = 'Si è verificato un errore durante la richiesta del saluto.';
